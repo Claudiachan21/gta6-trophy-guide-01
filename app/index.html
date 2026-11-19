@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida Trophy Guide — GTA VI (PS5)</title>
+<meta name="description" content="Offline guide and tracker for all 55 Grand Theft Auto VI trophies on PlayStation 5: official names, descriptions and grades, a cited guide for each, a roadmap to the platinum, and a saved checklist.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div class="top-inner">
+    <div class="top-title">
+      <p class="eyebrow">Grand Theft Auto VI &middot; PlayStation 5</p>
+      <h1>Leonida Trophy Guide</h1>
+      <p class="sub">All 55 trophies — official names, descriptions &amp; grades, with a cited guide for
+      each one. A roadmap to the platinum, a saved checklist, filters and a spoiler-free mode.
+      Works fully offline.</p>
+    </div>
+    <div class="plat" id="plat-box" aria-label="Platinum progress">
+      <div class="plat-num"><span id="earned-count">0</span><span class="plat-den"> / 55</span></div>
+      <div class="plat-label">trophies earned</div>
+      <div class="plat-bar"><div id="plat-fill"></div></div>
+      <div class="plat-sub"><span id="points">0</span> / 1,350 pts &middot; <span id="plat-pct">0%</span> to Platinum</div>
+    </div>
+  </div>
+</header>
+
+<div class="layout">
+  <aside class="side">
+    <section class="card">
+      <label class="field-label" for="search">Search trophies</label>
+      <input id="search" type="search" placeholder="Name or description&hellip;" autocomplete="off">
+    </section>
+
+    <section class="card">
+      <h2>Filter</h2>
+      <div class="chips" id="filter-chips" role="group" aria-label="Filter by kind">
+        <button class="chip is-active" data-filter="all">All <span class="n" data-count="all"></span></button>
+        <button class="chip" data-filter="story">Story <span class="n" data-count="story"></span></button>
+        <button class="chip" data-filter="missable">Missable <span class="n" data-count="missable"></span></button>
+        <button class="chip" data-filter="collectibles">Collectibles <span class="n" data-count="collectibles"></span></button>
+        <button class="chip" data-filter="activities">Activities <span class="n" data-count="activities"></span></button>
+        <button class="chip" data-filter="online">Online <span class="n" data-count="online"></span></button>
+        <button class="chip" data-filter="earned">Earned <span class="n" data-count="earned"></span></button>
+        <button class="chip" data-filter="todo">Not earned <span class="n" data-count="todo"></span></button>
+      </div>
+      <p class="hint" id="filter-note"></p>
+    </section>
+
+    <section class="card">
+      <h2>Roadmap to Platinum</h2>
+      <ol class="roadmap" id="roadmap"></ol>
+    </section>
+
+    <section class="card">
+      <h2>Spoiler-free mode</h2>
+      <label class="switch">
+        <input type="checkbox" id="spoiler-toggle">
+        <span class="switch-ui"></span>
+        <span class="switch-text">Hide story trophy names &amp; descriptions until earned</span>
+      </label>
+      <p class="hint">28 of the 55 trophies are hidden on PlayStation until earned. This mode keeps
+      their names secret here too.</p>
+    </section>
+
+    <section class="card">
+      <h2>Your progress</h2>
+      <p class="hint">Saved in this browser (localStorage). Export a backup file, or import one back.</p>
+      <div class="btn-row">
+        <button class="btn" id="btn-export">Export progress</button>
+        <button class="btn" id="btn-import">Import progress</button>
+        <input type="file" id="import-file" accept="application/json,.json" hidden>
+      </div>
+      <div class="btn-row">
+        <button class="btn btn-quiet" id="btn-reset">Reset all progress</button>
+      </div>
+      <p class="hint" id="save-state">No saved game yet.</p>
+    </section>
+  </aside>
+
+  <main class="main">
+    <div class="list-head">
+      <span id="result-count"></span>
+      <label class="sort">Sort
+        <select id="sort">
+          <option value="id">Trophy order</option>
+          <option value="grade">Grade (Platinum first)</option>
+          <option value="name">Name A–Z</option>
+        </select>
+      </label>
+    </div>
+    <div id="trophy-list" class="list"></div>
+  </main>
+</div>
+
+<aside class="detail" id="detail" hidden aria-label="Trophy detail">
+  <button class="detail-close" id="detail-close" aria-label="Close detail">&times;</button>
+  <div id="detail-body"></div>
+</aside>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>

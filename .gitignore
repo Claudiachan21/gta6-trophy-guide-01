@@ -1,0 +1,5 @@
+# Build output from main.ts (regenerated on every run; never committed)
+out/
+# Local tooling
+node_modules/
+.DS_Store
